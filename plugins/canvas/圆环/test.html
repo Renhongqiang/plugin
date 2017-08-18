@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<script src="test.js"></script>
+<script>
+    function range() {
+        return parseInt(80 + Math.random() * 130)
+    }
+
+    for (var i = 1, len = 6; i < len; i++) {
+        animationBall('#canvas', i * 60, i * 60, 10 + i, "#bfa", '#baf', false, range())
+        animationBall('#canvas', (i + 1) * 60, 60, 10 + i, "#bfa", '#baf', true, range())
+    }
+</script>
+</body>
+</html>
